@@ -29,9 +29,6 @@ public class FindDuplicates {
 
     private static final Logger log = Logger.getLogger(FindDuplicates.class);
 
-    String duplicateCompareFirstField="name";
-    String duplicateCompareSecondField="url";
-
     @ConfigProperty(name = "elastic.username")
     String elasticUsername;
 
@@ -41,11 +38,17 @@ public class FindDuplicates {
     @ConfigProperty(name = "elastic.index")
     String index;
 
-    @ConfigProperty(name = "elastic.host", defaultValue = "192.168.1.111")
+    @ConfigProperty(name = "elastic.host")
     String elasticHost;
 
-    @ConfigProperty(name = "elastic.port", defaultValue = "9200")
+    @ConfigProperty(name = "elastic.port")
     int elasticPort;
+
+    @ConfigProperty(name = "duplicate.compare.firstField")
+    String duplicateCompareFirstField;
+
+    @ConfigProperty(name = "duplicate.compare.secondField")
+    String duplicateCompareSecondField;
 
     private RestClient restClient;
     private ElasticsearchClient client;
