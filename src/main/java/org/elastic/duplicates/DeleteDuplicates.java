@@ -41,10 +41,10 @@ public class DeleteDuplicates {
                                     if (ids.size() <= 1) continue;
 
                                     String[] parts = entry.getKey().split("\\|", 2);
-                                    log.infof("Deleting %d duplicates for: name='%s' documentPath='%s'",
-                                            ids.size() - 1,
-                                            parts[0],
-                                            parts.length > 1 ? parts[1] : "");
+//                                    log.infof("Deleting %d duplicates for: name='%s' documentPath='%s'",
+//                                            ids.size() - 1,
+//                                            parts[0],
+//                                            parts.length > 1 ? parts[1] : "");
 
                                     for (int i = 1; i < ids.size(); i++) {
                                         String id = ids.get(i);
